@@ -1,0 +1,75 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, TextInput, Dimensions, TouchableOpacity, } from 'react-native';
+import Boton from './Componenetes/Boton';
+
+export default function App() {
+  return (
+    <View style={styles.global}>
+    <View style={styles.move}>
+    <View style={styles.container}>
+      <Text style={styles.titulo}>Iniciá Sesión</Text>
+      <Text style={styles.subtitulo}>¡Ingresá tu cuenta!</Text>
+
+      <TextInput 
+      placeholder='Correo1234@gmail.com'
+      placeholderTextColor={'gray'}
+      style={styles.textInput}
+      />
+      <TextInput
+      placeholder='Contraseña'
+      placeholderTextColor={'gray'}
+      style={styles.textInput}
+      />
+      <Boton/>
+      <StatusBar style="auto" />
+    </View>
+    </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  global: {
+    flex:1,
+    backgroundColor: '#2F4F4F',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#3E3E3E',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
+  },
+  move: {
+    alignContent: 'center',
+    marginLeft: 490,
+    marginTop: 150,
+    borderRadius: 10,
+    height: 300,
+    width: 400,
+  },
+  titulo: {
+    fontSize: 50,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  subtitulo: {
+    fontSize: 20,
+    color: 'black',
+    fontWeight: 'bold',
+    paddingBottom: 10,
+  },
+  textInput: {
+    borderRadius: 10,
+    margin: 10,
+    width: 300,
+    height: 30,
+    backgroundColor: 'white',
+    paddingStart: 10,
+    
+  },
+  boton: {
+
+  },
+
+});
